@@ -1,0 +1,245 @@
+/* Colors */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+
+    /* Sizes*/
+    --mobile: 375px;
+    --desktop: 700px;
+
+
+    /* Primary */
+    --light-red-solid: hsl(0, 100%, 67%);
+    --orangey-yellow-solid: hsl(39, 100%, 56%);
+    --green-teal-solid: hsl(166, 100%, 37%);
+    --cobalt-blue-solid: hsl(234, 85%, 45%);
+    
+    --light-red: hsla(0, 100%, 67%, .1);
+    --orangey-yellow: hsla(39, 100%, 56%, .1);
+    --green-teal: hsla(166, 100%, 37%, .1);
+    --cobalt-blue: hsla(234, 85%, 45%, .1);
+   
+    /* Gradients */
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --light-royal-blue: hsl(241, 81%, 54%);
+        /* Background */
+        --gradient-bg: linear-gradient(
+            var(--light-slate-blue),
+            var(--light-royal-blue));
+    
+    --violet-blue: hsla(256, 72%, 46%, 1); 
+    --persian-blue: hsla(241, 72%, 46%, 0);   
+        /* Circle */
+        --gradient-cirlce: linear-gradient(
+            var(--violet-blue),
+            var(--persian-blue));
+    
+    /* Neutral */
+
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+
+    /* Fonts */
+    --ff-default: 'Hanken Grotesk', sans-serif;
+
+    --fw-regular: 500;
+    --fw-medium: 700;
+    --fw-bold: 800;
+
+    --fs-400: 1.125rem;
+    --fs-500: 1.25rem;
+    --fs-600: 1.5rem;
+    --fs-700: 1.8rem;
+    --fs-800: 2.5rem;
+    --fs-900: 7rem;
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    font: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: var(--ff-default);
+    font-size: var(--fs-700);
+    color: var(--dark-gray-blue);
+    
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    max-width: 144rem;
+    
+    
+ }
+
+ .card { 
+    background-color: var(--white);
+    border-radius: 1rem;
+    box-shadow: 2rem 2rem 3rem var(--cobalt-blue);
+    width: 100%;
+   
+}
+
+@media (min-width: 440px) {
+    
+    .card {
+        width: 40rem;
+    }
+}
+
+@media (min-width: 940px) {
+    
+    .card {
+    width: 70rem;
+    margin-top: 10rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: auto;
+    }
+}
+
+.section {
+    padding: 4rem;
+}
+
+.title {
+    font-size: var(--fs-800);
+}
+
+.item-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+
+.result__title,
+.result__comment,
+.result__scoring
+ {
+    color: var(--light-lavender);
+}
+
+.result {
+    background: var(--gradient-bg);
+    border-radius: 0  0 4rem 4rem;
+    display: grid;
+    color: var(--white);
+    text-align: center;
+    align-items: center;
+    gap: 1rem;
+    
+    @media (min-width: 940px) {
+        border-radius: 4rem;
+
+    }
+}
+
+.result__scoring {
+    background: var(--gradient-cirlce);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 66%;
+    margin-top: 2rem;    
+    margin-bottom: 2rem;    
+
+}
+
+.result__scoring span {
+    font-size: var(--fs-900);
+    display: block;
+    color: var(--white);
+}
+
+.result__comment {
+    padding: 0 10%;
+}
+
+.result__comment span {
+    font-size: var(--fs-800);
+    display: block;
+    margin: 2rem;
+    color: var(--white);
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+.summary__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    border-radius: 1rem;
+    
+}
+
+.summary__item--1 {
+    color: var(--light-red-solid);
+    background-color: var(--light-red) ;
+    
+}
+
+.summary__item--2 {
+    color: var(--orangey-yellow-solid);
+    background-color: var(--orangey-yellow) ;
+}
+
+.summary__item--3 {
+    color: var(--green-teal-solid);
+    background-color: var(--green-teal);
+}
+
+.summary__item--4 {
+    color: var(--cobalt-blue-solid);
+    background-color: var(--cobalt-blue);
+}
+
+.button {
+    background-color: var(--dark-gray-blue);
+    color: var(--white);
+    border: none;
+    border-radius: 5rem;
+    padding: 2rem;
+    transition: background-color 0.3s;
+
+    
+
+}
+
+.button:hover {
+    background-color: var(--light-slate-blue);
+}
+
+@media (min-width: 940px) {
+    .attribution {
+        position: absolute;
+        bottom: 2rem;
+    }
+}
+
